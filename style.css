@@ -61,7 +61,6 @@ header h1 {
     justify-content: center;
     font-weight: bold;
     font-size: 1.2rem;
-    border-radius: 4px;
     margin-right: 15px;
 }
 
@@ -123,53 +122,43 @@ header h1 {
 
 /* Team colors for car numbers */
 .team-mclaren {
-    background-color: #ff8700;
-    color: black;
+    color: #ff8700;
 }
 
 .team-ferrari {
-    background-color: #dc0000;
-    color: white;
+    color: #dc0000;
 }
 
 .team-redbull {
-    background-color: #0600ef;
-    color: white;
+    color: #0600ef;
 }
 
 .team-mercedes {
-    background-color: #00d2be;
-    color: black;
+    color: #00d2be;
 }
 
 .team-astonmartin {
-    background-color: #006f62;
-    color: white;
+    color: #006f62;
 }
 
 .team-alpine {
-    background-color: #0090ff;
-    color: white;
+    color: #0090ff;
 }
 
 .team-williams {
-    background-color: #005aff;
-    color: white;
+    color: #005aff;
 }
 
 .team-vcarb {
-    background-color: #2b4562;
-    color: white;
+    color: #6b8ba4;
 }
 
 .team-kicksauber {
-    background-color: #52e252;
-    color: black;
+    color: #52e252;
 }
 
 .team-haas {
-    background-color: #b6babd;
-    color: black;
+    color: #b6babd;
 }
 
 /* Modal Styles */
