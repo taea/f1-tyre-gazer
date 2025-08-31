@@ -100,7 +100,10 @@ function openModal(driverIndex) {
     currentDriverIndex = driverIndex;
     const driver = drivers[driverIndex];
     
-    document.getElementById('modalDriverNumber').textContent = driver.number;
+    const modalDriverNumber = document.getElementById('modalDriverNumber');
+    modalDriverNumber.textContent = driver.number;
+    modalDriverNumber.className = `driver-number team-${driver.team}`;
+    
     document.getElementById('modalDriverCode').textContent = driver.code;
     document.getElementById('tyreSelect').value = '';
     

@@ -197,10 +197,22 @@ header h1 {
 .driver-info {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     margin-bottom: 25px;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: bold;
+}
+
+.modal-content .driver-number {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+.modal-content .driver-code {
+    margin: 0;
+    width: auto;
 }
 
 .tyre-selection {
