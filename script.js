@@ -137,6 +137,17 @@ function removeTyre(driverIndex, tyreIndex) {
     }
 }
 
+// Reset all tyres
+function resetAllTyres() {
+    if (confirm('すべてのタイヤ履歴をリセットしますか？\nこの操作は取り消せません。')) {
+        drivers.forEach(driver => {
+            driver.tyres = [];
+        });
+        saveToStorage();
+        renderDrivers();
+    }
+}
+
 // Event listeners
 document.addEventListener('DOMContentLoaded', () => {
     loadFromStorage();
@@ -144,6 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.getElementById('pitOutBtn').addEventListener('click', addTyre);
     document.getElementById('cancelBtn').addEventListener('click', closeModal);
+    document.getElementById('resetAllBtn').addEventListener('click', resetAllTyres);
     
     // Close modal when clicking outside
     document.getElementById('pitModal').addEventListener('click', (e) => {

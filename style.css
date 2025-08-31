@@ -250,6 +250,35 @@ header h1 {
     opacity: 0.8;
 }
 
+/* Reset Button */
+.reset-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.reset-button {
+    background-color: #dc0000;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Saira', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+    letter-spacing: 1px;
+}
+
+.reset-button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+.reset-button:active {
+    transform: scale(0.98);
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     header h1 {
