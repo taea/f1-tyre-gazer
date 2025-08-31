@@ -153,7 +153,7 @@ function removeTyre(driverIndex, tyreIndex) {
 function resetAllTyres() {
     if (confirm('すべてのタイヤ履歴をリセットしますか？\nこの操作は取り消せません。')) {
         drivers.forEach(driver => {
-            driver.tyres = [];
+            driver.tyres = ['M'];
         });
         saveToStorage();
         renderDrivers();
