@@ -140,7 +140,7 @@ header h1 {
 }
 
 .team-alpine {
-    color: #0090ff;
+    color: #00b4ff;
 }
 
 .team-williams {
@@ -212,13 +212,13 @@ header h1 {
 }
 
 .modal-content.team-alpine {
-    border-color: #0090ff;
+    border-color: #00b4ff;
 }
 .modal-content.team-alpine h2 {
-    color: #0090ff;
+    color: #00b4ff;
 }
 .modal-content.team-alpine #pitOutBtn {
-    background-color: #0090ff;
+    background-color: #00b4ff;
 }
 
 .modal-content.team-williams {
