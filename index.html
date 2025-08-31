@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Tyre Gazer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>F1 TYRE GAZER</h1>
+        </header>
+
+        <main>
+            <div class="drivers-list" id="driversList">
+                <!-- Drivers will be populated by JavaScript -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Pit Stop Modal -->
+    <div class="modal" id="pitModal">
+        <div class="modal-content">
+            <h2>BOX</h2>
+            <div class="driver-info">
+                <span class="driver-number" id="modalDriverNumber"></span>
+                <span class="driver-code" id="modalDriverCode"></span>
+            </div>
+            <div class="tyre-selection">
+                <select id="tyreSelect">
+                    <option value="">Select Tyre</option>
+                    <option value="S">Soft (S)</option>
+                    <option value="M">Medium (M)</option>
+                    <option value="H">Hard (H)</option>
+                    <option value="I">Intermediate (I)</option>
+                    <option value="W">Wet (W)</option>
+                </select>
+            </div>
+            <div class="modal-buttons">
+                <button id="pitOutBtn">PITOUT</button>
+                <button id="cancelBtn">CANCEL</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
