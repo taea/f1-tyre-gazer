@@ -20,7 +20,7 @@ https://github.com/user-attachments/assets/c144c8b5-d84b-45fc-82ac-ed9be0170459
 こんな感じの初期プロンプト ([prompt.md](https://github.com/taea/f1-tyre-gazer/blob/main/prompt.md) に載せてます)。まずはミニマムで欲しい機能だけ作ってもらいました。
 将来的には自動化できるといいと思いますが、観戦しながら手動で記録するのも結構楽しそうな気がしていますｗ
 
-# F1 Tyre Gazer
+# prompt: F1 Tyre Gazer
 
 - F1のレース観戦中に現在誰がどのタイヤに交換したのか覚えていられなくなるので、それを解決するサイトが欲しいです
 - 私一人の利用を想定しています
