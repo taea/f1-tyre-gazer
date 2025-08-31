@@ -17,7 +17,7 @@ const drivers = [
     { number: 18, code: 'STR', name: 'Lance Stroll', team: 'astonmartin', tyres: ['M'] },
     // Alpine (6th in 2024)
     { number: 10, code: 'GAS', name: 'Pierre Gasly', team: 'alpine', tyres: ['M'] },
-    { number: 21, code: 'COR', name: 'Franco Colapinto', team: 'alpine', tyres: ['M'] },
+    { number: 21, code: 'COL', name: 'Franco Colapinto', team: 'alpine', tyres: ['M'] },
     // Williams (7th in 2024)
     { number: 23, code: 'ALB', name: 'Alex Albon', team: 'williams', tyres: ['M'] },
     { number: 55, code: 'SAI', name: 'Carlos Sainz', team: 'williams', tyres: ['M'] },
