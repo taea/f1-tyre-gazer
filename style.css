@@ -27,7 +27,7 @@ header h1 {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 2px;
-    color: #e10600;
+    color: #ffffff;
 }
 
 .drivers-list {
@@ -373,8 +373,8 @@ header h1 {
 }
 
 .reset-button {
-    background-color: #dc0000;
-    color: white;
+    background-color: #ffffff;
+    color: #15151e;
     border: none;
     padding: 12px 30px;
     font-size: 1rem;
