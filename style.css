@@ -159,6 +159,110 @@ header h1 {
     color: #b6babd;
 }
 
+/* Modal team-specific styling */
+.modal-content.team-mclaren {
+    border-color: #ff8700;
+}
+.modal-content.team-mclaren h2 {
+    color: #ff8700;
+}
+.modal-content.team-mclaren #pitOutBtn {
+    background-color: #ff8700;
+}
+
+.modal-content.team-ferrari {
+    border-color: #dc0000;
+}
+.modal-content.team-ferrari h2 {
+    color: #dc0000;
+}
+.modal-content.team-ferrari #pitOutBtn {
+    background-color: #dc0000;
+}
+
+.modal-content.team-redbull {
+    border-color: #0600ef;
+}
+.modal-content.team-redbull h2 {
+    color: #0600ef;
+}
+.modal-content.team-redbull #pitOutBtn {
+    background-color: #0600ef;
+}
+
+.modal-content.team-mercedes {
+    border-color: #00d2be;
+}
+.modal-content.team-mercedes h2 {
+    color: #00d2be;
+}
+.modal-content.team-mercedes #pitOutBtn {
+    background-color: #00d2be;
+    color: black;
+}
+
+.modal-content.team-astonmartin {
+    border-color: #006f62;
+}
+.modal-content.team-astonmartin h2 {
+    color: #006f62;
+}
+.modal-content.team-astonmartin #pitOutBtn {
+    background-color: #006f62;
+}
+
+.modal-content.team-alpine {
+    border-color: #0090ff;
+}
+.modal-content.team-alpine h2 {
+    color: #0090ff;
+}
+.modal-content.team-alpine #pitOutBtn {
+    background-color: #0090ff;
+}
+
+.modal-content.team-williams {
+    border-color: #005aff;
+}
+.modal-content.team-williams h2 {
+    color: #005aff;
+}
+.modal-content.team-williams #pitOutBtn {
+    background-color: #005aff;
+}
+
+.modal-content.team-vcarb {
+    border-color: #6b8ba4;
+}
+.modal-content.team-vcarb h2 {
+    color: #6b8ba4;
+}
+.modal-content.team-vcarb #pitOutBtn {
+    background-color: #6b8ba4;
+}
+
+.modal-content.team-kicksauber {
+    border-color: #52e252;
+}
+.modal-content.team-kicksauber h2 {
+    color: #52e252;
+}
+.modal-content.team-kicksauber #pitOutBtn {
+    background-color: #52e252;
+    color: black;
+}
+
+.modal-content.team-haas {
+    border-color: #b6babd;
+}
+.modal-content.team-haas h2 {
+    color: #b6babd;
+}
+.modal-content.team-haas #pitOutBtn {
+    background-color: #b6babd;
+    color: black;
+}
+
 /* Modal Styles */
 .modal {
     display: none;
@@ -249,7 +353,6 @@ header h1 {
 }
 
 #pitOutBtn {
-    background-color: #e10600;
     color: white;
 }
 

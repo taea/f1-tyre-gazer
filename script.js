@@ -107,6 +107,10 @@ function openModal(driverIndex) {
     document.getElementById('modalDriverCode').textContent = driver.code;
     document.getElementById('tyreSelect').value = '';
     
+    // Apply team color to modal content
+    const modalContent = document.querySelector('.modal-content');
+    modalContent.className = `modal-content team-${driver.team}`;
+    
     const modal = document.getElementById('pitModal');
     modal.classList.add('active');
 }
@@ -115,6 +119,11 @@ function openModal(driverIndex) {
 function closeModal() {
     const modal = document.getElementById('pitModal');
     modal.classList.remove('active');
+    
+    // Remove team class from modal content
+    const modalContent = document.querySelector('.modal-content');
+    modalContent.className = 'modal-content';
+    
     currentDriverIndex = null;
 }
 
