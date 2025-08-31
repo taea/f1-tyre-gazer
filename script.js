@@ -1,35 +1,35 @@
 // Current F1 Drivers at Dutch GP 2025 (ordered by 2024 Constructor's Championship)
 const drivers = [
     // McLaren (1st in 2024)
-    { number: 4, code: 'NOR', name: 'Lando Norris', team: 'mclaren', tyres: [] },
-    { number: 81, code: 'PIA', name: 'Oscar Piastri', team: 'mclaren', tyres: [] },
+    { number: 4, code: 'NOR', name: 'Lando Norris', team: 'mclaren', tyres: ['M'] },
+    { number: 81, code: 'PIA', name: 'Oscar Piastri', team: 'mclaren', tyres: ['M'] },
     // Ferrari (2nd in 2024)
-    { number: 16, code: 'LEC', name: 'Charles Leclerc', team: 'ferrari', tyres: [] },
-    { number: 44, code: 'HAM', name: 'Lewis Hamilton', team: 'ferrari', tyres: [] },
+    { number: 16, code: 'LEC', name: 'Charles Leclerc', team: 'ferrari', tyres: ['M'] },
+    { number: 44, code: 'HAM', name: 'Lewis Hamilton', team: 'ferrari', tyres: ['M'] },
     // Red Bull (3rd in 2024)
-    { number: 1, code: 'VER', name: 'Max Verstappen', team: 'redbull', tyres: [] },
-    { number: 22, code: 'TSU', name: 'Yuki Tsunoda', team: 'redbull', tyres: [] },
+    { number: 1, code: 'VER', name: 'Max Verstappen', team: 'redbull', tyres: ['M'] },
+    { number: 22, code: 'TSU', name: 'Yuki Tsunoda', team: 'redbull', tyres: ['M'] },
     // Mercedes (4th in 2024)
-    { number: 12, code: 'ANT', name: 'Andrea Kimi Antonelli', team: 'mercedes', tyres: [] },
-    { number: 63, code: 'RUS', name: 'George Russell', team: 'mercedes', tyres: [] },
+    { number: 12, code: 'ANT', name: 'Andrea Kimi Antonelli', team: 'mercedes', tyres: ['M'] },
+    { number: 63, code: 'RUS', name: 'George Russell', team: 'mercedes', tyres: ['M'] },
     // Aston Martin (5th in 2024)
-    { number: 14, code: 'ALO', name: 'Fernando Alonso', team: 'astonmartin', tyres: [] },
-    { number: 18, code: 'STR', name: 'Lance Stroll', team: 'astonmartin', tyres: [] },
+    { number: 14, code: 'ALO', name: 'Fernando Alonso', team: 'astonmartin', tyres: ['M'] },
+    { number: 18, code: 'STR', name: 'Lance Stroll', team: 'astonmartin', tyres: ['M'] },
     // Alpine (6th in 2024)
-    { number: 10, code: 'GAS', name: 'Pierre Gasly', team: 'alpine', tyres: [] },
-    { number: 21, code: 'COR', name: 'Franco Colapinto', team: 'alpine', tyres: [] },
+    { number: 10, code: 'GAS', name: 'Pierre Gasly', team: 'alpine', tyres: ['M'] },
+    { number: 21, code: 'COR', name: 'Franco Colapinto', team: 'alpine', tyres: ['M'] },
     // Williams (7th in 2024)
-    { number: 23, code: 'ALB', name: 'Alex Albon', team: 'williams', tyres: [] },
-    { number: 55, code: 'SAI', name: 'Carlos Sainz', team: 'williams', tyres: [] },
+    { number: 23, code: 'ALB', name: 'Alex Albon', team: 'williams', tyres: ['M'] },
+    { number: 55, code: 'SAI', name: 'Carlos Sainz', team: 'williams', tyres: ['M'] },
     // VCARB (8th in 2024)
-    { number: 33, code: 'HAD', name: 'Isack Hadjar', team: 'vcarb', tyres: [] },
-    { number: 30, code: 'LAW', name: 'Liam Lawson', team: 'vcarb', tyres: [] },
+    { number: 33, code: 'HAD', name: 'Isack Hadjar', team: 'vcarb', tyres: ['M'] },
+    { number: 30, code: 'LAW', name: 'Liam Lawson', team: 'vcarb', tyres: ['M'] },
     // Kick Sauber (9th in 2024)
-    { number: 27, code: 'HUL', name: 'Nico Hulkenberg', team: 'kicksauber', tyres: [] },
-    { number: 87, code: 'BOR', name: 'Gabriel Bortoleto', team: 'kicksauber', tyres: [] },
+    { number: 27, code: 'HUL', name: 'Nico Hulkenberg', team: 'kicksauber', tyres: ['M'] },
+    { number: 87, code: 'BOR', name: 'Gabriel Bortoleto', team: 'kicksauber', tyres: ['M'] },
     // Haas (10th in 2024)
-    { number: 31, code: 'OCO', name: 'Esteban Ocon', team: 'haas', tyres: [] },
-    { number: 43, code: 'BEA', name: 'Oliver Bearman', team: 'haas', tyres: [] }
+    { number: 31, code: 'OCO', name: 'Esteban Ocon', team: 'haas', tyres: ['M'] },
+    { number: 43, code: 'BEA', name: 'Oliver Bearman', team: 'haas', tyres: ['M'] }
 ];
 
 let currentDriverIndex = null;
@@ -41,7 +41,7 @@ function loadFromStorage() {
         const parsedData = JSON.parse(savedData);
         parsedData.forEach((savedDriver, index) => {
             if (drivers[index] && drivers[index].number === savedDriver.number) {
-                drivers[index].tyres = savedDriver.tyres || [];
+                drivers[index].tyres = savedDriver.tyres || ['M'];
             }
         });
     }
