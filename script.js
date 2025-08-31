@@ -10,8 +10,8 @@ const drivers = [
     { number: 1, code: 'VER', name: 'Max Verstappen', team: 'redbull', tyres: ['M'] },
     { number: 22, code: 'TSU', name: 'Yuki Tsunoda', team: 'redbull', tyres: ['M'] },
     // Mercedes (4th in 2024)
-    { number: 12, code: 'ANT', name: 'Andrea Kimi Antonelli', team: 'mercedes', tyres: ['M'] },
     { number: 63, code: 'RUS', name: 'George Russell', team: 'mercedes', tyres: ['M'] },
+    { number: 12, code: 'ANT', name: 'Andrea Kimi Antonelli', team: 'mercedes', tyres: ['M'] },
     // Aston Martin (5th in 2024)
     { number: 14, code: 'ALO', name: 'Fernando Alonso', team: 'astonmartin', tyres: ['M'] },
     { number: 18, code: 'STR', name: 'Lance Stroll', team: 'astonmartin', tyres: ['M'] },
