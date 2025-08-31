@@ -7,7 +7,8 @@
 - 各タイヤはクリックすると削除が可能です
 - スタート時のタイヤ選択状況に応じて全員のタイヤをユーザーがセットする必要があります（スタート前が多分一番いそがしいですｗ）
 - ドライバーの表示順は、とりあえず2024年のコンストラクターズ順位で並べてあります。
-- https://github.com/user-attachments/assets/c144c8b5-d84b-45fc-82ac-ed9be0170459
+
+https://github.com/user-attachments/assets/c144c8b5-d84b-45fc-82ac-ed9be0170459
 
 
 
