@@ -5,7 +5,8 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Saira', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
     background-color: #15151e;
     color: #ffffff;
     min-height: 100vh;
