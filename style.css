@@ -353,6 +353,11 @@ header h1 {
     transition: opacity 0.2s;
 }
 
+.modal-buttons button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 #pitOutBtn {
     color: white;
 }
@@ -362,8 +367,59 @@ header h1 {
     color: white;
 }
 
-.modal-buttons button:hover {
+.modal-buttons button:hover:not(:disabled) {
     opacity: 0.8;
+}
+
+/* Retire section */
+.retire-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    text-align: center;
+}
+
+.retire-link {
+    background: none;
+    border: 1px solid #666;
+    color: #999;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: normal;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Saira', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.retire-link:hover {
+    border-color: #999;
+    color: #ccc;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Retired drivers styles */
+.driver-row.retired {
+    opacity: 0.5;
+}
+
+.driver-row.retired:hover {
+    opacity: 0.7;
+}
+
+.retired-badge {
+    background-color: #666;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Disabled select */
+select:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 /* Reset Button */
