@@ -1,35 +1,35 @@
 // Current F1 Drivers at Dutch GP 2025 (ordered by 2024 Constructor's Championship)
 const drivers = [
     // McLaren (1st in 2024)
-    { number: 4, code: 'NOR', name: 'Lando Norris', team: 'mclaren', tyres: ['M'] },
-    { number: 81, code: 'PIA', name: 'Oscar Piastri', team: 'mclaren', tyres: ['M'] },
+    { number: 4, code: 'NOR', name: 'Lando Norris', team: 'mclaren', tyres: ['M'], retired: false },
+    { number: 81, code: 'PIA', name: 'Oscar Piastri', team: 'mclaren', tyres: ['M'], retired: false },
     // Ferrari (2nd in 2024)
-    { number: 16, code: 'LEC', name: 'Charles Leclerc', team: 'ferrari', tyres: ['M'] },
-    { number: 44, code: 'HAM', name: 'Lewis Hamilton', team: 'ferrari', tyres: ['M'] },
+    { number: 16, code: 'LEC', name: 'Charles Leclerc', team: 'ferrari', tyres: ['M'], retired: false },
+    { number: 44, code: 'HAM', name: 'Lewis Hamilton', team: 'ferrari', tyres: ['M'], retired: false },
     // Red Bull (3rd in 2024)
-    { number: 1, code: 'VER', name: 'Max Verstappen', team: 'redbull', tyres: ['M'] },
-    { number: 22, code: 'TSU', name: 'Yuki Tsunoda', team: 'redbull', tyres: ['M'] },
+    { number: 1, code: 'VER', name: 'Max Verstappen', team: 'redbull', tyres: ['M'], retired: false },
+    { number: 22, code: 'TSU', name: 'Yuki Tsunoda', team: 'redbull', tyres: ['M'], retired: false },
     // Mercedes (4th in 2024)
-    { number: 63, code: 'RUS', name: 'George Russell', team: 'mercedes', tyres: ['M'] },
-    { number: 12, code: 'ANT', name: 'Andrea Kimi Antonelli', team: 'mercedes', tyres: ['M'] },
+    { number: 63, code: 'RUS', name: 'George Russell', team: 'mercedes', tyres: ['M'], retired: false },
+    { number: 12, code: 'ANT', name: 'Andrea Kimi Antonelli', team: 'mercedes', tyres: ['M'], retired: false },
     // Aston Martin (5th in 2024)
-    { number: 14, code: 'ALO', name: 'Fernando Alonso', team: 'astonmartin', tyres: ['M'] },
-    { number: 18, code: 'STR', name: 'Lance Stroll', team: 'astonmartin', tyres: ['M'] },
+    { number: 14, code: 'ALO', name: 'Fernando Alonso', team: 'astonmartin', tyres: ['M'], retired: false },
+    { number: 18, code: 'STR', name: 'Lance Stroll', team: 'astonmartin', tyres: ['M'], retired: false },
     // Alpine (6th in 2024)
-    { number: 10, code: 'GAS', name: 'Pierre Gasly', team: 'alpine', tyres: ['M'] },
-    { number: 21, code: 'COL', name: 'Franco Colapinto', team: 'alpine', tyres: ['M'] },
+    { number: 10, code: 'GAS', name: 'Pierre Gasly', team: 'alpine', tyres: ['M'], retired: false },
+    { number: 21, code: 'COL', name: 'Franco Colapinto', team: 'alpine', tyres: ['M'], retired: false },
     // Williams (7th in 2024)
-    { number: 23, code: 'ALB', name: 'Alex Albon', team: 'williams', tyres: ['M'] },
-    { number: 55, code: 'SAI', name: 'Carlos Sainz', team: 'williams', tyres: ['M'] },
+    { number: 23, code: 'ALB', name: 'Alex Albon', team: 'williams', tyres: ['M'], retired: false },
+    { number: 55, code: 'SAI', name: 'Carlos Sainz', team: 'williams', tyres: ['M'], retired: false },
     // VCARB (8th in 2024)
-    { number: 33, code: 'HAD', name: 'Isack Hadjar', team: 'vcarb', tyres: ['M'] },
-    { number: 30, code: 'LAW', name: 'Liam Lawson', team: 'vcarb', tyres: ['M'] },
+    { number: 33, code: 'HAD', name: 'Isack Hadjar', team: 'vcarb', tyres: ['M'], retired: false },
+    { number: 30, code: 'LAW', name: 'Liam Lawson', team: 'vcarb', tyres: ['M'], retired: false },
     // Kick Sauber (9th in 2024)
-    { number: 27, code: 'HUL', name: 'Nico Hulkenberg', team: 'kicksauber', tyres: ['M'] },
-    { number: 87, code: 'BOR', name: 'Gabriel Bortoleto', team: 'kicksauber', tyres: ['M'] },
+    { number: 27, code: 'HUL', name: 'Nico Hulkenberg', team: 'kicksauber', tyres: ['M'], retired: false },
+    { number: 87, code: 'BOR', name: 'Gabriel Bortoleto', team: 'kicksauber', tyres: ['M'], retired: false },
     // Haas (10th in 2024)
-    { number: 31, code: 'OCO', name: 'Esteban Ocon', team: 'haas', tyres: ['M'] },
-    { number: 43, code: 'BEA', name: 'Oliver Bearman', team: 'haas', tyres: ['M'] }
+    { number: 31, code: 'OCO', name: 'Esteban Ocon', team: 'haas', tyres: ['M'], retired: false },
+    { number: 43, code: 'BEA', name: 'Oliver Bearman', team: 'haas', tyres: ['M'], retired: false }
 ];
 
 let currentDriverIndex = null;
@@ -42,6 +42,7 @@ function loadFromStorage() {
         parsedData.forEach((savedDriver, index) => {
             if (drivers[index] && drivers[index].number === savedDriver.number) {
                 drivers[index].tyres = savedDriver.tyres || ['M'];
+                drivers[index].retired = savedDriver.retired || false;
             }
         });
     }
@@ -51,7 +52,8 @@ function loadFromStorage() {
 function saveToStorage() {
     const dataToSave = drivers.map(driver => ({
         number: driver.number,
-        tyres: driver.tyres
+        tyres: driver.tyres,
+        retired: driver.retired
     }));
     localStorage.setItem('f1TyreData', JSON.stringify(dataToSave));
 }
@@ -63,7 +65,7 @@ function renderDrivers() {
 
     drivers.forEach((driver, index) => {
         const driverRow = document.createElement('div');
-        driverRow.className = 'driver-row';
+        driverRow.className = driver.retired ? 'driver-row retired' : 'driver-row';
         driverRow.onclick = () => openModal(index);
 
         const driverNumber = document.createElement('div');
@@ -77,16 +79,24 @@ function renderDrivers() {
         const tyresContainer = document.createElement('div');
         tyresContainer.className = 'tyres-container';
 
-        driver.tyres.forEach((tyre, tyreIndex) => {
-            const tyreBadge = document.createElement('div');
-            tyreBadge.className = `tyre-badge tyre-${tyre}`;
-            tyreBadge.textContent = tyre;
-            tyreBadge.onclick = (e) => {
-                e.stopPropagation();
-                removeTyre(index, tyreIndex);
-            };
-            tyresContainer.appendChild(tyreBadge);
-        });
+        // Add RETIRED badge if driver is retired
+        if (driver.retired) {
+            const retiredBadge = document.createElement('div');
+            retiredBadge.className = 'retired-badge';
+            retiredBadge.textContent = 'RETIRED';
+            tyresContainer.appendChild(retiredBadge);
+        } else {
+            driver.tyres.forEach((tyre, tyreIndex) => {
+                const tyreBadge = document.createElement('div');
+                tyreBadge.className = `tyre-badge tyre-${tyre}`;
+                tyreBadge.textContent = tyre;
+                tyreBadge.onclick = (e) => {
+                    e.stopPropagation();
+                    removeTyre(index, tyreIndex);
+                };
+                tyresContainer.appendChild(tyreBadge);
+            });
+        }
 
         driverRow.appendChild(driverNumber);
         driverRow.appendChild(driverCode);
@@ -110,6 +120,21 @@ function openModal(driverIndex) {
     // Apply team color to modal content
     const modalContent = document.querySelector('.modal-content');
     modalContent.className = `modal-content team-${driver.team}`;
+    
+    // Disable tyre selection and PITOUT button if driver is retired
+    const tyreSelect = document.getElementById('tyreSelect');
+    const pitOutBtn = document.getElementById('pitOutBtn');
+    const retireBtn = document.getElementById('retireBtn');
+    
+    if (driver.retired) {
+        tyreSelect.disabled = true;
+        pitOutBtn.disabled = true;
+        retireBtn.textContent = 'REJOIN';
+    } else {
+        tyreSelect.disabled = false;
+        pitOutBtn.disabled = false;
+        retireBtn.textContent = 'RETIRE';
+    }
     
     const modal = document.getElementById('pitModal');
     modal.classList.add('active');
@@ -149,6 +174,27 @@ function removeTyre(driverIndex, tyreIndex) {
     }
 }
 
+// Toggle driver retirement status
+function toggleRetirement() {
+    if (currentDriverIndex !== null) {
+        const driver = drivers[currentDriverIndex];
+        
+        if (driver.retired) {
+            // Rejoin the race
+            driver.retired = false;
+        } else {
+            // Retire from the race
+            if (confirm(`${driver.name}をリタイアさせますか？`)) {
+                driver.retired = true;
+            }
+        }
+        
+        saveToStorage();
+        renderDrivers();
+        closeModal();
+    }
+}
+
 // Reset all tyres
 function resetAllTyres() {
     if (confirm('すべてのタイヤ履歴をリセットしますか？\nこの操作は取り消せません。')) {
@@ -166,6 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderDrivers();
     
     document.getElementById('pitOutBtn').addEventListener('click', addTyre);
+    document.getElementById('retireBtn').addEventListener('click', toggleRetirement);
     document.getElementById('cancelBtn').addEventListener('click', closeModal);
     document.getElementById('resetAllBtn').addEventListener('click', resetAllTyres);
     
