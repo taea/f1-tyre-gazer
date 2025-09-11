@@ -35,12 +35,20 @@ header h1 {
 }
 
 .driver-row {
-    display: flex;
-    align-items: center;
-    padding: 12px 15px;
     border-bottom: 1px solid #2a2a3a;
     cursor: pointer;
     transition: background-color 0.2s;
+}
+
+.driver-content {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    transition: opacity 0.2s;
+}
+
+.driver-content.retired {
+    opacity: 0.4;
 }
 
 .driver-row:hover {
@@ -399,11 +407,7 @@ header h1 {
 }
 
 /* Retired drivers styles */
-.driver-row.retired {
-    opacity: 0.4;
-}
-
-.driver-row.retired:hover {
+.driver-row:hover .driver-content.retired {
     opacity: 0.5;
 }
 
@@ -419,7 +423,7 @@ header h1 {
 
 /* OUT label for retired drivers */
 .out-label {
-    color: #666;
+    color: #888;
     font-size: 0.9rem;
     font-weight: bold;
     margin-left: 8px;
@@ -467,7 +471,7 @@ select:disabled {
         font-size: 1.5rem;
     }
 
-    .driver-row {
+    .driver-content {
         padding: 10px;
     }
 
