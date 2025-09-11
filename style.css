@@ -35,23 +35,21 @@ header h1 {
 }
 
 .driver-row {
+    padding: 0;
+    border-bottom: 1px solid #2a2a3a;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.driver-content {
     display: flex;
     align-items: center;
     padding: 12px 15px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    position: relative;
+    transition: opacity 0.2s;
 }
 
-.driver-row::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: #2a2a3a;
-    opacity: 1;
+.driver-content.retired {
+    opacity: 0.4;
 }
 
 .driver-row:hover {
@@ -410,11 +408,7 @@ header h1 {
 }
 
 /* Retired drivers styles */
-.driver-row.retired {
-    opacity: 0.4;
-}
-
-.driver-row.retired:hover {
+.driver-row:hover .driver-content.retired {
     opacity: 0.5;
 }
 

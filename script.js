@@ -65,8 +65,12 @@ function renderDrivers() {
 
     drivers.forEach((driver, index) => {
         const driverRow = document.createElement('div');
-        driverRow.className = driver.retired ? 'driver-row retired' : 'driver-row';
+        driverRow.className = 'driver-row';
         driverRow.onclick = () => openModal(index);
+
+        // Create inner container for content that needs opacity
+        const driverContent = document.createElement('div');
+        driverContent.className = driver.retired ? 'driver-content retired' : 'driver-content';
 
         const driverNumber = document.createElement('div');
         driverNumber.className = `driver-number team-${driver.team}`;
@@ -101,9 +105,10 @@ function renderDrivers() {
             tyresContainer.appendChild(outLabel);
         }
 
-        driverRow.appendChild(driverNumber);
-        driverRow.appendChild(driverCode);
-        driverRow.appendChild(tyresContainer);
+        driverContent.appendChild(driverNumber);
+        driverContent.appendChild(driverCode);
+        driverContent.appendChild(tyresContainer);
+        driverRow.appendChild(driverContent);
         driversList.appendChild(driverRow);
     });
 }
