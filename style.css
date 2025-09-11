@@ -41,6 +41,17 @@ header h1 {
     border-bottom: 1px solid #2a2a3a;
     cursor: pointer;
     transition: background-color 0.2s;
+    position: relative;
+}
+
+.driver-row::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #2a2a3a;
 }
 
 .driver-row:hover {
@@ -419,7 +430,7 @@ header h1 {
 
 /* OUT label for retired drivers */
 .out-label {
-    color: #666;
+    color: #888;
     font-size: 0.9rem;
     font-weight: bold;
     margin-left: 8px;
