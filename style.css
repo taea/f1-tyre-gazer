@@ -38,7 +38,6 @@ header h1 {
     display: flex;
     align-items: center;
     padding: 12px 15px;
-    border-bottom: 1px solid #2a2a3a;
     cursor: pointer;
     transition: background-color 0.2s;
     position: relative;
@@ -47,11 +46,12 @@ header h1 {
 .driver-row::after {
     content: '';
     position: absolute;
-    bottom: -1px;
+    bottom: 0;
     left: 0;
     right: 0;
     height: 1px;
     background-color: #2a2a3a;
+    opacity: 1;
 }
 
 .driver-row:hover {
