@@ -79,23 +79,26 @@ function renderDrivers() {
         const tyresContainer = document.createElement('div');
         tyresContainer.className = 'tyres-container';
 
-        // Add RETIRED badge if driver is retired
-        if (driver.retired) {
-            const retiredBadge = document.createElement('div');
-            retiredBadge.className = 'retired-badge';
-            retiredBadge.textContent = 'RETIRED';
-            tyresContainer.appendChild(retiredBadge);
-        } else {
-            driver.tyres.forEach((tyre, tyreIndex) => {
-                const tyreBadge = document.createElement('div');
-                tyreBadge.className = `tyre-badge tyre-${tyre}`;
-                tyreBadge.textContent = tyre;
-                tyreBadge.onclick = (e) => {
-                    e.stopPropagation();
+        // Show tyres for all drivers
+        driver.tyres.forEach((tyre, tyreIndex) => {
+            const tyreBadge = document.createElement('div');
+            tyreBadge.className = driver.retired ? `tyre-badge tyre-${tyre} retired-tyre` : `tyre-badge tyre-${tyre}`;
+            tyreBadge.textContent = tyre;
+            tyreBadge.onclick = (e) => {
+                e.stopPropagation();
+                if (!driver.retired) {
                     removeTyre(index, tyreIndex);
-                };
-                tyresContainer.appendChild(tyreBadge);
-            });
+                }
+            };
+            tyresContainer.appendChild(tyreBadge);
+        });
+        
+        // Add OUT label if driver is retired
+        if (driver.retired) {
+            const outLabel = document.createElement('div');
+            outLabel.className = 'out-label';
+            outLabel.textContent = 'OUT';
+            tyresContainer.appendChild(outLabel);
         }
 
         driverRow.appendChild(driverNumber);
