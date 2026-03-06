@@ -1,35 +1,38 @@
-// Current F1 Drivers at Dutch GP 2025 (ordered by 2024 Constructor's Championship)
+// F1 2026 Season Drivers (ordered by 2025 Constructor's Championship)
 const drivers = [
-    // McLaren (1st in 2024)
-    { number: 4, code: 'NOR', name: 'Lando Norris', team: 'mclaren', tyres: ['M'], retired: false },
+    // McLaren (1st in 2025)
+    { number: 1, code: 'NOR', name: 'Lando Norris', team: 'mclaren', tyres: ['M'], retired: false },
     { number: 81, code: 'PIA', name: 'Oscar Piastri', team: 'mclaren', tyres: ['M'], retired: false },
-    // Ferrari (2nd in 2024)
+    // Ferrari (2nd in 2025)
     { number: 16, code: 'LEC', name: 'Charles Leclerc', team: 'ferrari', tyres: ['M'], retired: false },
     { number: 44, code: 'HAM', name: 'Lewis Hamilton', team: 'ferrari', tyres: ['M'], retired: false },
-    // Red Bull (3rd in 2024)
-    { number: 1, code: 'VER', name: 'Max Verstappen', team: 'redbull', tyres: ['M'], retired: false },
-    { number: 22, code: 'TSU', name: 'Yuki Tsunoda', team: 'redbull', tyres: ['M'], retired: false },
-    // Mercedes (4th in 2024)
+    // Red Bull (3rd in 2025)
+    { number: 3, code: 'VER', name: 'Max Verstappen', team: 'redbull', tyres: ['M'], retired: false },
+    { number: 33, code: 'HAD', name: 'Isack Hadjar', team: 'redbull', tyres: ['M'], retired: false },
+    // Mercedes (4th in 2025)
     { number: 63, code: 'RUS', name: 'George Russell', team: 'mercedes', tyres: ['M'], retired: false },
     { number: 12, code: 'ANT', name: 'Andrea Kimi Antonelli', team: 'mercedes', tyres: ['M'], retired: false },
-    // Aston Martin (5th in 2024)
+    // Aston Martin (5th in 2025)
     { number: 14, code: 'ALO', name: 'Fernando Alonso', team: 'astonmartin', tyres: ['M'], retired: false },
     { number: 18, code: 'STR', name: 'Lance Stroll', team: 'astonmartin', tyres: ['M'], retired: false },
-    // Alpine (6th in 2024)
+    // Alpine (6th in 2025)
     { number: 10, code: 'GAS', name: 'Pierre Gasly', team: 'alpine', tyres: ['M'], retired: false },
     { number: 21, code: 'COL', name: 'Franco Colapinto', team: 'alpine', tyres: ['M'], retired: false },
-    // Williams (7th in 2024)
+    // Williams (7th in 2025)
     { number: 23, code: 'ALB', name: 'Alex Albon', team: 'williams', tyres: ['M'], retired: false },
     { number: 55, code: 'SAI', name: 'Carlos Sainz', team: 'williams', tyres: ['M'], retired: false },
-    // VCARB (8th in 2024)
-    { number: 33, code: 'HAD', name: 'Isack Hadjar', team: 'vcarb', tyres: ['M'], retired: false },
-    { number: 30, code: 'LAW', name: 'Liam Lawson', team: 'vcarb', tyres: ['M'], retired: false },
-    // Kick Sauber (9th in 2024)
-    { number: 27, code: 'HUL', name: 'Nico Hulkenberg', team: 'kicksauber', tyres: ['M'], retired: false },
-    { number: 87, code: 'BOR', name: 'Gabriel Bortoleto', team: 'kicksauber', tyres: ['M'], retired: false },
-    // Haas (10th in 2024)
+    // Racing Bulls (8th in 2025)
+    { number: 30, code: 'LAW', name: 'Liam Lawson', team: 'racingbulls', tyres: ['M'], retired: false },
+    { number: 38, code: 'LIN', name: 'Arvid Lindblad', team: 'racingbulls', tyres: ['M'], retired: false },
+    // Haas (9th in 2025)
     { number: 31, code: 'OCO', name: 'Esteban Ocon', team: 'haas', tyres: ['M'], retired: false },
-    { number: 43, code: 'BEA', name: 'Oliver Bearman', team: 'haas', tyres: ['M'], retired: false }
+    { number: 43, code: 'BEA', name: 'Oliver Bearman', team: 'haas', tyres: ['M'], retired: false },
+    // Audi (10th in 2025)
+    { number: 27, code: 'HUL', name: 'Nico Hulkenberg', team: 'audi', tyres: ['M'], retired: false },
+    { number: 87, code: 'BOR', name: 'Gabriel Bortoleto', team: 'audi', tyres: ['M'], retired: false },
+    // Cadillac (11th - new in 2026)
+    { number: 11, code: 'PER', name: 'Sergio Perez', team: 'cadillac', tyres: ['M'], retired: false },
+    { number: 77, code: 'BOT', name: 'Valtteri Bottas', team: 'cadillac', tyres: ['M'], retired: false }
 ];
 
 let currentDriverIndex = null;

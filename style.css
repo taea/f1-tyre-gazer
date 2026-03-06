@@ -155,16 +155,20 @@ header h1 {
     color: #005aff;
 }
 
-.team-vcarb {
-    color: #6b8ba4;
+.team-racingbulls {
+    color: #ffc800;
 }
 
-.team-kicksauber {
-    color: #52e252;
+.team-audi {
+    color: #e83000;
+}
+
+.team-cadillac {
+    color: #c0c0c0;
 }
 
 .team-haas {
-    color: #b6babd;
+    color: #ffffff;
 }
 
 /* Modal team-specific styling */
@@ -239,35 +243,46 @@ header h1 {
     background-color: #005aff;
 }
 
-.modal-content.team-vcarb {
-    border-color: #6b8ba4;
+.modal-content.team-racingbulls {
+    border-color: #ffc800;
 }
-.modal-content.team-vcarb h2 {
-    color: #6b8ba4;
+.modal-content.team-racingbulls h2 {
+    color: #ffc800;
 }
-.modal-content.team-vcarb #pitOutBtn {
-    background-color: #6b8ba4;
+.modal-content.team-racingbulls #pitOutBtn {
+    background-color: #ffc800;
+    color: black;
 }
 
-.modal-content.team-kicksauber {
-    border-color: #52e252;
+.modal-content.team-audi {
+    border-color: #e83000;
 }
-.modal-content.team-kicksauber h2 {
-    color: #52e252;
+.modal-content.team-audi h2 {
+    color: #e83000;
 }
-.modal-content.team-kicksauber #pitOutBtn {
-    background-color: #52e252;
+.modal-content.team-audi #pitOutBtn {
+    background-color: #e83000;
+}
+
+.modal-content.team-cadillac {
+    border-color: #c0c0c0;
+}
+.modal-content.team-cadillac h2 {
+    color: #c0c0c0;
+}
+.modal-content.team-cadillac #pitOutBtn {
+    background-color: #c0c0c0;
     color: black;
 }
 
 .modal-content.team-haas {
-    border-color: #b6babd;
+    border-color: #ffffff;
 }
 .modal-content.team-haas h2 {
-    color: #b6babd;
+    color: #ffffff;
 }
 .modal-content.team-haas #pitOutBtn {
-    background-color: #b6babd;
+    background-color: #ffffff;
     color: black;
 }
 
